@@ -12,11 +12,12 @@ class App extends React.Component{
     this.handleClick = this.handleClick.bind(this)
   }
 
-
-  render(){
+componentDidUpdate(prevCount) {
     if(this.state.count % 2 === 0) {
-    console.log(`Rendering with count:-${this.state.count}`)
+      console.log(`Rendering with count:-${this.state.count}`)
     }
+  }
+  render(){
     return(
       <div>
         <span id="count">{this.state.count}</span>
